@@ -13,6 +13,9 @@ public class Inventory <T extends Item>{
 
     public void add (T item){
         //creating inventory for only item or anything under items
+        if(item.getQuantity() <= 0){
+            throw new InvalidQuantityExceptions("Quantity must be greater than 0");
+        }
         items.put(item.getId(), item);
     }
 
