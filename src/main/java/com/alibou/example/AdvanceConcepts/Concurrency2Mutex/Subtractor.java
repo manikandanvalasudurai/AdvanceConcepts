@@ -12,7 +12,7 @@ public class Subtractor implements Callable<Void> {
 
     @Override
     public Void call() throws Exception {
-        for(int i=1; i <100000;i++){
+        for(int i=1; i <1000000;i++){
            synchronized(value){
                System.out.println("Subtractor " + i);
                value.setX(value.getX()-i);

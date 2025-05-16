@@ -6,17 +6,13 @@ public class ParkingLot {
     public ParkingLot(SlotAllocationStrategy slotAllocationStrategy) {
         this.slotAllocationStrategy = slotAllocationStrategy;
     }
-
-    public SlotAllocationStrategy getSlotAllocationStrategy() {
-        return slotAllocationStrategy;
-    }
-
+    //setter
     public void setSlotAllocationStrategy(SlotAllocationStrategy slotAllocationStrategy) {
         this.slotAllocationStrategy = slotAllocationStrategy;
     }
 
     public String generateTicket(){
         int slot = slotAllocationStrategy.allocateSlot();
-        return " Ticket #" + slot;
+        return "Ticket --> " + slot;
     }
 }
