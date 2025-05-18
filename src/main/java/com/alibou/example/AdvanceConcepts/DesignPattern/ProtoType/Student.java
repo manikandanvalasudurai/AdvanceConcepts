@@ -1,28 +1,23 @@
-package com.alibou.example.AdvanceConcepts.DesignPattern.Prototypes;
+package com.alibou.example.AdvanceConcepts.DesignPattern.ProtoType;
 
 public class Student {
     private String name;
     private int age;
     private String batch;
 
-    public Student() {
-
+    public Student(){
     }
 
-    public Student(Student student) {
-        this.name = name;
-        this.age = age;
-        this.batch = batch;
-
+    public Student(Student student){
+        this.name = student.name;
+        this.age = student.age;
+        this.batch = student.batch;
     }
-
     public Student copy(){
-        Student student = new Student();
-        student.age = this.age;
-        student.batch = this.batch;
-        student.name = this.name;
+        Student student = new Student(this);
         return student;
     }
+
 
     public String getName() {
         return name;

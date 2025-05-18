@@ -1,21 +1,23 @@
-package com.alibou.example.AdvanceConcepts.DesignPattern.Prototypes;
+package com.alibou.example.AdvanceConcepts.DesignPattern.ProtoType;
 
 import java.util.HashMap;
 
 public class StudentRegistry {
     private HashMap<String, Student> students;
 
-    public StudentRegistry() {
+    StudentRegistry() {
         students = new HashMap<>();
     }
-    public void add (String key,Student student) {
+
+    public void addStudent(String key,Student student) {
         students.put(key, student);
     }
-    public void remove(String key) {
+
+    public void removeStudent(String key) {
         students.remove(key);
     }
 
-    public Student get(String key) {
+    public Student getStudents(String key) {
         return students.get(key);
     }
 }
